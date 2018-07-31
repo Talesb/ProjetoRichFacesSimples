@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Teste RichFaces</title>
+</head>
+<body>
+
+<a4j:outputPanel ajaxRendered="true">
+<a4j:form id="frmcart" ignoreDupResponses="false">
+	<rich:panel header="Greeter Richfaces" style="width: 315px">
+		<h:outputText value="Name: " />
+		<h:inputText value="#{loginMB.email}">
+			<f:validateLength minimum="1" maximum="30" />
+		</h:inputText><br></br>
+
+<a4j:commandButton value="Show Current Selection" reRender="add" id="button">
+</a4j:commandButton>
+<h:panelGrid id="add">
+    <h:panelGroup id="test" >
+           <h:outputText value="Hello, " rendered="#{not empty loginMB.email}" />
+           <h:outputText value="#{loginMB.email}" />
+           <h:outputText value="!" rendered="#{not empty loginMB.email}" />
+    </h:panelGroup>
+    </h:panelGrid>
+	</rich:panel>
+	</a4j:form>
+	</a4j:outputPanel>
+</body>
+
+</ui:composition>

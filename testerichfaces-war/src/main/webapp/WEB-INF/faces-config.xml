@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
+    version="1.2">
+	<managed-bean>
+		<managed-bean-name>loginMB</managed-bean-name>
+		<managed-bean-class>br.com.testerichfaces.manager.LoginManagerBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+         <property-name>email</property-name>
+         <property-class>java.lang.String</property-class>
+         <value/>
+      </managed-property>
+	</managed-bean>
+	<application>  
+  <view-handler>org.ajax4jsf.application.AjaxViewHandler</view-handler>
+</application> 
+
+</faces-config>

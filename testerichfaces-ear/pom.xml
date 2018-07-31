@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com</groupId>
+		<artifactId>testerichfaces</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>testerichfaces-ear</artifactId>
+	<packaging>ear</packaging>
+	<build>
+		<!-- <plugins> <plugin> <groupId>org.wildfly.plugins</groupId> <artifactId>wildfly-maven-plugin</artifactId> 
+			<version>1.0.0.Final</version> <executions> <execution> <phase>install</phase> 
+			<goals> <goal>deploy</goal> </goals> </execution> </executions> </plugin> 
+			</plugins> -->
+
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+				<includes>
+					<include>**/*.xml</include>
+					<include>META-INF/*</include>
+				</includes>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.10.1</version>
+				<configuration>
+					<!-- http://maven.apache.org/plugins/maven-ear-plugin/ -->
+					<version>6</version>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<generateApplicationXml>true</generateApplicationXml>
+					<earSourceDirectory>${basedir}/src/main/resources</earSourceDirectory>
+					<excludes>**/WEB-INF/lib</excludes>
+					<packagingExcludes>WEB-INF/lib/**</packagingExcludes>
+					<modules>
+						<webModule>
+							<groupId>br.com</groupId>
+							<artifactId>testerichfaces-war</artifactId>
+							<contextRoot>/testerichfaces</contextRoot>
+						</webModule>
+						<ejbModule>
+							<groupId>br.com</groupId>
+							<artifactId>testerichfaces-ejb</artifactId>
+						</ejbModule>
+					</modules>
+				</configuration>
+
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>br.com</groupId>
+			<artifactId>testerichfaces-war</artifactId>
+			<type>war</type>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>br.com</groupId>
+			<artifactId>testerichfaces-ejb</artifactId>
+			<type>ejb</type>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+</project>
