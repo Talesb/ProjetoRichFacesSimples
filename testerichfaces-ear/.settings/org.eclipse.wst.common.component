@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
     <wb-module deploy-name="testerichfaces-ear-0.0.1-SNAPSHOT">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
-        <wb-resource deploy-path="/" source-path="/src/main/application"/>
-        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/" source-path="/src/main/resources" tag="defaultRootSource"/>
         <dependent-module archiveName="testerichfaces-war-0.0.1-SNAPSHOT.war" deploy-path="/" handle="module:/resource/testerichfaces-war/testerichfaces-war">
-            <dependent-object>Module_1532893318031</dependent-object>
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <dependent-module archiveName="testerichfaces-ejb-0.0.1-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/testerichfaces-ejb/testerichfaces-ejb">
-            <dependent-object>Module_1532893318027</dependent-object>
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="richfaces-api-3.3.3.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/richfaces/framework/richfaces-api/3.3.3.Final/richfaces-api-3.3.3.Final.jar">
+        <dependent-module archiveName="jsf-impl-1.2.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/javax/faces/jsf-impl/1.2/jsf-impl-1.2.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="commons-collections-3.2.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/commons-collections/commons-collections/3.2/commons-collections-3.2.jar">
+        <dependent-module archiveName="jsf-api-1.2.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/javax/faces/jsf-api/1.2/jsf-api-1.2.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="commons-beanutils-1.8.0.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0.jar">
+        <dependent-module archiveName="richfaces-api-3.3.3.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/richfaces/framework/richfaces-api/3.3.3.Final/richfaces-api-3.3.3.Final.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="commons-logging-1.0.4.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar">
+        <dependent-module archiveName="commons-collections-3.2.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/commons-collections/commons-collections/3.2/commons-collections-3.2.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="richfaces-ui-3.3.3.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/richfaces/ui/richfaces-ui/3.3.3.Final/richfaces-ui-3.3.3.Final.jar">
+        <dependent-module archiveName="commons-beanutils-1.8.0.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="commons-digester-1.8.1.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1.jar">
+        <dependent-module archiveName="commons-logging-1.0.4.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="richfaces-impl-3.3.3.Final.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/richfaces/framework/richfaces-impl/3.3.3.Final/richfaces-impl-3.3.3.Final.jar">
+        <dependent-module archiveName="richfaces-ui-3.3.3.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/richfaces/ui/richfaces-ui/3.3.3.Final/richfaces-ui-3.3.3.Final.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="jsf-facelets-1.1.15.B1.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/com/sun/facelets/jsf-facelets/1.1.15.B1/jsf-facelets-1.1.15.B1.jar">
+        <dependent-module archiveName="commons-digester-1.8.1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="richfaces-impl-3.3.3.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/richfaces/framework/richfaces-impl/3.3.3.Final/richfaces-impl-3.3.3.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jsf-facelets-1.1.15.B1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/com/sun/facelets/jsf-facelets/1.1.15.B1/jsf-facelets-1.1.15.B1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="component.exclusion.patterns" value="WEB-INF/lib/**"/>
     </wb-module>
 </project-modules>

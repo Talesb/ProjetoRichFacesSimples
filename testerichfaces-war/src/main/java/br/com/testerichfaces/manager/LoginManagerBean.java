@@ -1,21 +1,30 @@
 package br.com.testerichfaces.manager;
 
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import br.com.testerichfaces.ejb.LoginController;
+
 public class LoginManagerBean {
 
-	private String email="";
-//	private String senha;
-//	private boolean Logado;
+	private String email = "";
+	private String senha;
+	private Boolean logado = false;
 
-//	@EJB
-//	private LoginController loginController;
-	
+	LoginController loginController;
 	public LoginManagerBean() {
-		 
+
+		try {
+			 loginController =  (LoginController)new InitialContext().lookup("java:global/testerichfaces-ear/testerichfaces-ejb-0.0.1-SNAPSHOT/LoginControllerBean!br.com.testerichfaces.ejb.LoginController");
+		} catch (NamingException e) {
+			e.printStackTrace();
+		}
+		
 	}
-//
-//	public void login(String email, String senha) {
-//		this.Logado = loginController.isCadastrado(email, senha);
-//	}
+
+	public void login() {
+		this.logado = loginController.isCadastrado(email, senha);
+	}
 
 	public String getEmail() {
 		return email;
@@ -25,29 +34,20 @@ public class LoginManagerBean {
 		this.email = email;
 	}
 
-//	public String getSenha() {
-//		return senha;
-//	}
-//
-//	public void setSenha(String senha) {
-//		this.senha = senha;
-//	}
-//
-//	public boolean isLogado() {
-//		return Logado;
-//	}
-//
-//	public void setLogado(boolean logado) {
-//		Logado = logado;
-//	}
+	public String getSenha() {
+		return senha;
+	}
 
-//	public String Redirect() {
-//		login(this.getEmail(),this.getSenha());
-//		
-//		if(this.Logado==true) {
-//			return"dashboard.xhtml";
-//		}else {
-//			return "error";
-//		}
-//	}
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	public Boolean isLogado() {
+		return logado;
+	}
+
+	public void setLogado(Boolean logado) {
+		this.logado = logado;
+	}
+
 }

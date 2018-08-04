@@ -23,6 +23,11 @@
 		<param-value>true</param-value>
 	</context-param>
 
+<context-param>
+   <param-name>org.jboss.jbossfaces.WAR_BUNDLES_JSF_IMPL</param-name>
+   <param-value>true</param-value>
+</context-param>
+
 	<context-param>
 		<param-name>javax.faces.FACELETS_VIEW_MAPPINGS</param-name>
 		<param-value>.xhtml</param-value>

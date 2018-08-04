@@ -12,6 +12,11 @@
 		<module>testerichfaces-ear</module>
 	</modules>
 
+	<properties>
+		<wildfly10.home>C:\Java\jboss\wildfly10</wildfly10.home>
+	</properties>
+
+
 	<dependencies>
 		<dependency>
 			<groupId>javax.ejb</groupId>
@@ -49,6 +54,13 @@
 			<artifactId>jsf-facelets</artifactId>
 			<version>1.1.15.B1</version>
 			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
 		</dependency>
 
 	</dependencies>

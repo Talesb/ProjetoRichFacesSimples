@@ -21,20 +21,24 @@ public class ClienteDao {
 	}
 
 	public Cliente findByEmail(String email) {
-		Cliente cliente = null;
 		for (Cliente clienteaux : db.getClientes()) {
-			if (clienteaux.getEmail() == email) {
-				cliente = clienteaux;
+			if (clienteaux.getEmail().equalsIgnoreCase(email)) {
+				return clienteaux;
 			}
 		}
-		if (cliente != null) {
-			return cliente;
-		} else {
 			return null;
-		}
-
 	}
 
+	
+	public Cliente findByEmailSenha(String email,String senha) {
+		for (Cliente clienteaux : db.getClientes()) {
+			if (clienteaux.getEmail().equalsIgnoreCase(email)&&(clienteaux.getSenha().equals(senha))){
+				return clienteaux;
+			}
+		}
+			return null;
+	}
+	
 	public void insertLivro(Cliente cliente, Livro livro) {
 		Cliente clienteAux = findByEmail(cliente.getEmail());
 		clienteAux.addLivro(livro);

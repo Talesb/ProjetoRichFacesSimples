@@ -7,14 +7,10 @@
 		<artifactId>testerichfaces</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+
 	<artifactId>testerichfaces-ear</artifactId>
 	<packaging>ear</packaging>
 	<build>
-		<!-- <plugins> <plugin> <groupId>org.wildfly.plugins</groupId> <artifactId>wildfly-maven-plugin</artifactId> 
-			<version>1.0.0.Final</version> <executions> <execution> <phase>install</phase> 
-			<goals> <goal>deploy</goal> </goals> </execution> </executions> </plugin> 
-			</plugins> -->
-
 		<resources>
 			<resource>
 				<directory>${basedir}/src/main/resources</directory>
@@ -25,6 +21,30 @@
 			</resource>
 		</resources>
 		<plugins>
+			<plugin>
+				<groupId>org.codehaus.cargo</groupId>
+				<artifactId>cargo-maven2-plugin</artifactId>
+				<version>1.4.19</version>
+				<configuration>
+					<wait>false</wait>
+					<container>
+						<containerId>wildfly10x</containerId>
+						<home>${wildfly10.home}</home>
+						<type>installed</type>
+					</container>
+					<configuration>
+						<type>existing</type>
+						<home>
+							${wildfly10.home}\standalone
+						</home>
+						<properties>
+							<cargo.jboss.configuration>
+								standalone
+							</cargo.jboss.configuration>
+						</properties>
+					</configuration>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-ear-plugin</artifactId>

@@ -14,7 +14,13 @@
          <property-class>java.lang.String</property-class>
          <value/>
       </managed-property>
+      <managed-property>
+         <property-name>senha</property-name>
+         <property-class>java.lang.String</property-class>
+         <value/>
+      </managed-property>
 	</managed-bean>
+ 
 	<application>  
   <view-handler>org.ajax4jsf.application.AjaxViewHandler</view-handler>
 </application> 

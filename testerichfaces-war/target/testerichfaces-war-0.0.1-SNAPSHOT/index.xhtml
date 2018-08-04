@@ -14,20 +14,23 @@
 <body>
 
 <a4j:outputPanel ajaxRendered="true">
-<a4j:form id="frmcart" ignoreDupResponses="false">
+<a4j:form id="formRichFaces" ignoreDupResponses="false">
 	<rich:panel header="Greeter Richfaces" style="width: 315px">
-		<h:outputText value="Name: " />
+		<h:outputText value="Email: " />
 		<h:inputText value="#{loginMB.email}">
 			<f:validateLength minimum="1" maximum="30" />
 		</h:inputText><br></br>
+<h:outputText value="Senha: " />
+<h:inputSecret value = "#{loginMB.senha}" />
+		
 
-<a4j:commandButton value="Show Current Selection" reRender="add" id="button">
+<a4j:commandButton value="Show Current Selection" reRender="add" id="button" action="#{loginMB.login()}">
 </a4j:commandButton>
 <h:panelGrid id="add">
     <h:panelGroup id="test" >
-           <h:outputText value="Hello, " rendered="#{not empty loginMB.email}" />
-           <h:outputText value="#{loginMB.email}" />
-           <h:outputText value="!" rendered="#{not empty loginMB.email}" />
+           <h:outputText value="Bem vindo! " rendered="#{loginMB.isLogado()}" />
+           <h:outputText value="#{loginMB.email}" rendered="#{loginMB.isLogado()}" />
+           <h:outputText value="!" rendered="#{loginMB.isLogado()}" />
     </h:panelGroup>
     </h:panelGrid>
 	</rich:panel>
