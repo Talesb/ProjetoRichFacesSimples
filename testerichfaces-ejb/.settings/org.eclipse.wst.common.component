@@ -3,6 +3,7 @@
         <wb-resource deploy-path="/" source-path="/src/main/resources" tag="defaultRootSource"/>
         <wb-resource deploy-path="/" source-path="/src/main/java"/>
         <wb-resource deploy-path="/" source-path="/.apt_generated"/>
+        <wb-resource deploy-path="/" source-path="/.apt_generated_tests"/>
         <property name="java-output-path" value="/testerichfaces-ejb/target/classes"/>
     </wb-module>
 </project-modules>

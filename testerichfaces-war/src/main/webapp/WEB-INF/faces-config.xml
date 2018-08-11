@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<faces-config
-    xmlns="http://java.sun.com/xml/ns/javaee"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
-    version="1.2">
+<faces-config version="1.2"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
 	<managed-bean>
 		<managed-bean-name>loginMB</managed-bean-name>
 		<managed-bean-class>br.com.testerichfaces.manager.LoginManagerBean</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 		<managed-property>
-         <property-name>email</property-name>
-         <property-class>java.lang.String</property-class>
-         <value/>
-      </managed-property>
-      <managed-property>
-         <property-name>senha</property-name>
-         <property-class>java.lang.String</property-class>
-         <value/>
-      </managed-property>
+			<property-name>email</property-name>
+			<property-class>java.lang.String</property-class>
+			<value />
+		</managed-property>
+		<managed-property>
+			<property-name>senha</property-name>
+			<property-class>java.lang.String</property-class>
+			<value />
+		</managed-property>
 	</managed-bean>
- 
-	<application>  
-  <view-handler>org.ajax4jsf.application.AjaxViewHandler</view-handler>
-</application> 
+	<application>
+		<view-handler>org.ajax4jsf.application.AjaxViewHandler</view-handler>
+	</application>
+	
+
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>index2</from-outcome>
+			<to-view-id>/index2.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>home</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
 
 </faces-config>

@@ -22,7 +22,7 @@ public class LoginManagerBean {
 		
 	}
 
-	public void login() {
+	private void login() {
 		this.logado = loginController.isCadastrado(email, senha);
 	}
 
@@ -48,6 +48,16 @@ public class LoginManagerBean {
 
 	public void setLogado(Boolean logado) {
 		this.logado = logado;
+	}
+	
+	public String redirectToLogin() {
+		login();
+		if(this.logado == true) {
+			return "index2";
+		}else {
+			return "home";
+		}
+		
 	}
 
 }

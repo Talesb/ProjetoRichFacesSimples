@@ -6,9 +6,13 @@ import java.util.List;
 public class Cliente {
 
 	private Integer id;
+	
 	private String nome;
+	
 	private String email;
+	
 	private String senha;
+	
 	private List<Livro> livros;
 	
 	public Cliente(Integer id, String nome, String email, String senha) {

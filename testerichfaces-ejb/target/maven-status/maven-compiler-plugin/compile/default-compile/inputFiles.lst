@@ -1,7 +1,8 @@
-C:\eclipse-workspace\testerichfaces\testerichfaces-ejb\src\main\java\br\com\testerichfaces\fakebd\FakeDataBase.java
-C:\eclipse-workspace\testerichfaces\testerichfaces-ejb\src\main\java\br\com\testerichfaces\ejb\LoginController.java
-C:\eclipse-workspace\testerichfaces\testerichfaces-ejb\src\main\java\br\com\testerichfaces\dao\LivroDao.java
-C:\eclipse-workspace\testerichfaces\testerichfaces-ejb\src\main\java\br\com\testerichfaces\ejb\LoginControllerBean.java
-C:\eclipse-workspace\testerichfaces\testerichfaces-ejb\src\main\java\br\com\testerichfaces\model\Cliente.java
-C:\eclipse-workspace\testerichfaces\testerichfaces-ejb\src\main\java\br\com\testerichfaces\model\Livro.java
-C:\eclipse-workspace\testerichfaces\testerichfaces-ejb\src\main\java\br\com\testerichfaces\dao\ClienteDao.java
+C:\workspaces-local\geral\ProjetoRichFacesSimples\testerichfaces-ejb\src\main\java\br\com\testerichfaces\model\Usuario.java
+C:\workspaces-local\geral\ProjetoRichFacesSimples\testerichfaces-ejb\src\main\java\br\com\testerichfaces\model\Livro.java
+C:\workspaces-local\geral\ProjetoRichFacesSimples\testerichfaces-ejb\src\main\java\br\com\testerichfaces\dao\LivroDao.java
+C:\workspaces-local\geral\ProjetoRichFacesSimples\testerichfaces-ejb\src\main\java\br\com\testerichfaces\fakebd\FakeDataBase.java
+C:\workspaces-local\geral\ProjetoRichFacesSimples\testerichfaces-ejb\src\main\java\br\com\testerichfaces\ejb\LoginController.java
+C:\workspaces-local\geral\ProjetoRichFacesSimples\testerichfaces-ejb\src\main\java\br\com\testerichfaces\ejb\LoginControllerBean.java
+C:\workspaces-local\geral\ProjetoRichFacesSimples\testerichfaces-ejb\src\main\java\br\com\testerichfaces\dao\ClienteDao.java
+C:\workspaces-local\geral\ProjetoRichFacesSimples\testerichfaces-ejb\src\main\java\br\com\testerichfaces\model\Cliente.java

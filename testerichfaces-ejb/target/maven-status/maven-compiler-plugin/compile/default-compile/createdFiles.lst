@@ -1,4 +1,5 @@
 br\com\testerichfaces\dao\ClienteDao.class
+br\com\testerichfaces\model\Usuario.class
 br\com\testerichfaces\ejb\LoginControllerBean.class
 br\com\testerichfaces\model\Livro.class
 br\com\testerichfaces\fakebd\FakeDataBase.class
