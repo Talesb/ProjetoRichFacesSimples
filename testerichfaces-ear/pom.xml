@@ -69,6 +69,7 @@
 						<ejbModule>
 							<groupId>br.com</groupId>
 							<artifactId>testerichfaces-ejb</artifactId>
+							<bundleDir>/</bundleDir>
 						</ejbModule>
 					</modules>
 				</configuration>

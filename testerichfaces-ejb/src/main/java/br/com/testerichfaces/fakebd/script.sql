@@ -9,7 +9,7 @@ create table SYS_USUARIO(
 	ID int primary key auto_increment,
 	NOMLOGINUSUARIO varchar(20) not null,
 	EMAIL varchar(50) unique not null,
-	senha varchar(255) not null
+	SENHA varchar(255) not null
 );
 
 

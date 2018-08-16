@@ -7,7 +7,6 @@
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/.apt_generated_tests"/>
         <property name="context-root" value="testerichfaces-war"/>
         <property name="java-output-path" value="/testerichfaces-war/target/classes"/>
         <property name="component.exclusion.patterns" value="WEB-INF/lib/**,WEB-INF/lib"/>
