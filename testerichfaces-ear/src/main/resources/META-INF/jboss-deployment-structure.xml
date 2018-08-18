@@ -13,9 +13,9 @@
 			<module name="javax.faces.api" export="true" slot="1.2" />
 			<module name="com.sun.jsf-impl" export="true" slot="1.2" />
 			<module name="org.apache.xerces" export="true" />
-			<module name="asm.asm" export="true" /> -->
+			<module name="asm.asm" export="true" /> 
 			<module name="com.microsoft.sqlserver" export="true" services="import" />
-			<module name="com.oracle.ojdbc7" export="true" services="import" />
+			<module name="com.oracle.ojdbc7" export="true" services="import" /> -->
 			<module name="com.mysql.jdbc" export="true" services="import"></module>
 		</dependencies>
 		<resources>
