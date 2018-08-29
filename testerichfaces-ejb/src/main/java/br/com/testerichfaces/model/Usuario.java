@@ -1,45 +1,43 @@
 package br.com.testerichfaces.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.Id;
-import javax.persistence.Persistence;
 import javax.persistence.Table;
 
+import br.com.testerichfaces.repositorio.RepositorioUsuarioBean;
+
 @Entity
-@Table(name="SYS_USUARIO")
-public class Usuario implements Serializable{
+@Table(name = "SYS_USUARIO")
+public class Usuario implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="ID")
+	@Column(name = "ID")
 	private Integer id;
-	
-	@Column(name="NOMLOGINUSUARIO")
+
+	@Column(name = "NOMLOGINUSUARIO")
 	private String nomLoginUsuario;
-	
-	@Column(name="EMAIL")
+
+	@Column(name = "EMAIL")
 	private String email;
-	
-	@Column(name="SENHA")
+
+	@Column(name = "SENHA")
 	private String senha;
-	
-	
-	public Usuario() {}
-	
-	
+
+	public Usuario() {
+	}
+
 	public Usuario(Integer id, String nomLoginUsuario, String email, String senha) {
 		this.id = id;
 		this.nomLoginUsuario = nomLoginUsuario;
 		this.email = email;
 		this.senha = senha;
 	}
-
 
 	public Integer getId() {
 		return id;
@@ -76,6 +74,5 @@ public class Usuario implements Serializable{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
-		
+
 }

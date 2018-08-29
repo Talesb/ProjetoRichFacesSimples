@@ -5,10 +5,11 @@
 			<module name="javax.faces.api" slot="main" />
 			<module name="com.sun.jsf-impl" slot="main" />
 			<module name="org.jboss.as.jsf-injection" slot="main" />
-			<module name="org.hibernate" />
+			<module name="org.hibernate" slot="main" />
 		</exclusions>
 		<dependencies>
-<!-- 	<module name="org.dom4j" export="true" />
+ 			<module name="org.dom4j" export="true" services="import" />
+<!-- 			
 			<module name="org.apache.commons.collections" export="true" />
 			<module name="javax.faces.api" export="true" slot="1.2" />
 			<module name="com.sun.jsf-impl" export="true" slot="1.2" />
@@ -17,20 +18,9 @@
 			<module name="com.microsoft.sqlserver" export="true" services="import" />
 			<module name="com.oracle.ojdbc7" export="true" services="import" /> -->
 			<module name="com.mysql.jdbc" export="true" services="import"></module>
-		</dependencies>
+ 		</dependencies>
 		<resources>
 			<resource-root path="." />
 		</resources>
 	</deployment>
-	<sub-deployment name="testerichfaces-war-0.0.1-SNAPSHOT.war">
-		<exclusions>
-			<module name="javax.faces.api" slot="main" />
-			<module name="com.sun.jsf-impl" slot="main" />
-			<module name="org.jboss.as.jsf-injection" slot="main" />
-		</exclusions>
-<!-- 		<dependencies>
-			<module name="javax.faces.api" slot="1.2" />
-			<module name="com.sun.jsf-impl" slot="1.2" />
-		</dependencies>
- -->	</sub-deployment>
 </jboss-deployment-structure>
