@@ -13,15 +13,17 @@ import br.com.testerichfaces.model.Usuario;
 
 @Stateless
 public class RepositorioUsuarioBean implements RepositorioUsuario {
-	
-	@PersistenceContext(unitName="richfacesteste-pu")
+
+	@PersistenceContext(name="richfacesteste-pu")
 	private EntityManager entityManager;
-	 
-	 public List<Usuario> findAllUsuarios(){
-		 
+
+	
+	public List<Usuario> findAllUsuarios() {
+
 		 Session session = (Session) entityManager.getDelegate();
-		 Criteria criteria = session.createCriteria(Usuario.class);
-		 return criteria.list();
-		 
-	 }
+//		Session session = entityManager.unwrap(Session.class);
+		Criteria criteria = session.createCriteria(Usuario.class);
+		return criteria.list();
+
+	}
 }

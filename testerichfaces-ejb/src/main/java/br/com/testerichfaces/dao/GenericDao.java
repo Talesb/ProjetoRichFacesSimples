@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 import org.hibernate.CacheMode;
 import org.hibernate.Criteria;
@@ -16,6 +17,7 @@ import org.hibernate.internal.CriteriaImpl.Subcriteria;
 
 public class GenericDao {
 
+	@PersistenceContext
 	private EntityManager entityManager;
 
 	public GenericDao(final EntityManager entityManager) throws Exception{

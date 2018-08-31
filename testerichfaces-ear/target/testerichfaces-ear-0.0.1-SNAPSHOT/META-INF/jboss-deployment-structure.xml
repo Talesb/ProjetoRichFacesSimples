@@ -1,24 +1,29 @@
-<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.0">
+<jboss-deployment-structure
+	xmlns="urn:jboss:deployment-structure:1.0">
 	<ear-subdeployments-isolated>false</ear-subdeployments-isolated>
 	<deployment>
 		<exclusions>
 			<module name="javax.faces.api" slot="main" />
 			<module name="com.sun.jsf-impl" slot="main" />
 			<module name="org.jboss.as.jsf-injection" slot="main" />
-			<module name="org.hibernate" slot="main" />
+			<module name="org.hibernate" />
 		</exclusions>
 		<dependencies>
- 			<module name="org.dom4j" export="true" services="import" />
-<!-- 			
-			<module name="org.apache.commons.collections" export="true" />
-			<module name="javax.faces.api" export="true" slot="1.2" />
-			<module name="com.sun.jsf-impl" export="true" slot="1.2" />
-			<module name="org.apache.xerces" export="true" />
-			<module name="asm.asm" export="true" /> 
-			<module name="com.microsoft.sqlserver" export="true" services="import" />
-			<module name="com.oracle.ojdbc7" export="true" services="import" /> -->
+			<module name="org.dom4j" export="true" services="import" />
+<!-- 			<module name="org.apache.commons.collections" export="true" /> -->
+<!-- 			<module name="javax.faces.api" export="true" slot="1.2" /> -->
+<!-- 			<module name="com.sun.jsf-impl" export="true" slot="1.2" /> -->
+<!-- 			<module name="org.apache.xerces" export="true" /> -->
+<!-- 			<module name="asm.asm" export="true" /> -->
+<!-- 			<module name="com.microsoft.sqlserver" export="true" -->
+<!-- 				services="import" /> -->
+<!-- 			<module name="com.oracle.ojdbc7" export="true" -->
+<!-- 				services="import" /> -->
+
+			<module name="javax.api" />
+			<module name="javax.transaction.api" />
 			<module name="com.mysql.jdbc" export="true" services="import"></module>
- 		</dependencies>
+		</dependencies>
 		<resources>
 			<resource-root path="." />
 		</resources>
