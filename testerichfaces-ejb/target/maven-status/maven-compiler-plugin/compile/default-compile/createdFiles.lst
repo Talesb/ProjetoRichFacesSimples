@@ -1,11 +1,13 @@
 br\com\testerichfaces\dao\ClienteDao.class
 br\com\testerichfaces\model\Usuario.class
+br\com\testerichfaces\repositorio\RepositorioGenerico.class
 br\com\testerichfaces\fakebd\FakeDataBase.class
-br\com\testerichfaces\repositorio\RepositorioUsuario.class
+br\com\testerichfaces\repositorio\RepositorioGenericoBean.class
 br\com\testerichfaces\dao\GenericDao.class
 br\com\testerichfaces\dao\LivroDao.class
-br\com\testerichfaces\repositorio\RepositorioUsuarioBean.class
 br\com\testerichfaces\model\Cliente.class
+br\com\testesrichfaces\repositorio\usuario\RepositorioUsuarioBean.class
 br\com\testerichfaces\ejb\LoginControllerBean.class
 br\com\testerichfaces\model\Livro.class
 br\com\testerichfaces\ejb\LoginController.class
+br\com\testesrichfaces\repositorio\usuario\RepositorioUsuario.class

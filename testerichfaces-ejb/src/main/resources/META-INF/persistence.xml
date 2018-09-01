@@ -7,18 +7,19 @@
 		<jta-data-source>java:/testerichfaces-earDS</jta-data-source>
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 <!-- 		<jar-file>testerichfaces-ejb-0.0.1-SNAPSHOT.jar</jar-file> -->
+		<class>br.com.testerichfaces.model.Usuario</class>
 
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		<shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
 		<validation-mode>NONE</validation-mode>
 		<properties>
 			<property name="hibernate.dialect"
-				value="org.hibernate.dialect.MySQLDialect" />
+				value="org.hibernate.dialect.MySQL57InnoDBDialect" />
 			<property name="hibernate.archive.interpreter"
 				value="org.hibernate.boot.archive.internal.StandardArchiveDescriptorFactory" />
-			<property name="hibernate.archive.autodetection"
-				value="class" />
-			<property name="hbm2ddl.auto" value="update" />
+<!-- 			<property name="hibernate.archive.autodetection" -->
+<!-- 				value="class" /> -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="javax.persistence.validation.mode"
 				value="none" />
 			<property name="hibernate.bytecode.use_reflection_optimizer"

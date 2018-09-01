@@ -3,6 +3,8 @@ package br.com.testerichfaces.dao;
 import java.util.Iterator;
 import java.util.List;
 
+import javax.crypto.Cipher;
+import javax.management.RuntimeErrorException;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -82,6 +84,64 @@ public class GenericDao {
 	
 	private Session getSession() {
 		return (Session) this.entityManager.getDelegate();
+	}
+
+	public EntityManager getEntityManager() {
+		return entityManager;
+	}
+
+	public void setEntityManager(EntityManager entityManager) {
+		this.entityManager = entityManager;
+	}
+
+	public Criteria getCriteria(final Class entidade) throws RuntimeException{
+		try {
+			final Criteria criteria = getSession().createCriteria(entidade);
+			criteria.setCacheMode(CacheMode.IGNORE);
+			criteria.setFlushMode(FlushMode.MANUAL);
+			return criteria;
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	public Object getUniqueEntityFromCriteria(Criteria criteria) throws RuntimeException{
+		try {
+			return criteria.uniqueResult();
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+		
+	}
+	
+	public void save(Object entity) throws RuntimeException{
+		try {
+			validateObeject(entity);
+			if(entityManager.contains(entity)) {
+				entityManager.merge(entity);
+			}else {
+				entityManager.persist(entity);
+			}
+			
+			
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	private void validateObeject(Object entity) {
+		if(entity == null) {
+			throw new RuntimeException("Entidade nula");
+		}
+	}
+	
+	public void delete(Object entity) throws RuntimeException{
+		try {
+			validateObeject(entity);
+			entityManager.remove(entity);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 

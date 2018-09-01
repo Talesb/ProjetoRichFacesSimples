@@ -8,7 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import br.com.testerichfaces.repositorio.RepositorioUsuarioBean;
+import br.com.testesrichfaces.repositorio.usuario.RepositorioUsuarioBean;
 
 @Entity
 @Table(name = "SYS_USUARIO")
