@@ -9,7 +9,7 @@
 		<managed-bean-class>br.com.testerichfaces.manager.LoginManagerBean</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 		<managed-property>
-			<property-name>email</property-name>
+			<property-name>nomLogin</property-name>
 			<property-class>java.lang.String</property-class>
 			<value />
 		</managed-property>

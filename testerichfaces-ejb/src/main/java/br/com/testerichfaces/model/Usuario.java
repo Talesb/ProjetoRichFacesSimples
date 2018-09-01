@@ -1,14 +1,13 @@
 package br.com.testerichfaces.model;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import br.com.testesrichfaces.repositorio.usuario.RepositorioUsuarioBean;
 
 @Entity
 @Table(name = "SYS_USUARIO")
@@ -18,6 +17,7 @@ public class Usuario implements Serializable {
 
 	@Id
 	@Column(name = "ID")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 
 	@Column(name = "NOMLOGINUSUARIO")

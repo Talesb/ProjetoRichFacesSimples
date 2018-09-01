@@ -9,5 +9,8 @@ import br.com.testerichfaces.repositorio.RepositorioGenerico;
 
 @Local
 public interface RepositorioUsuario<T extends Usuario> extends RepositorioGenerico<T>{
-	 List<Usuario> findAllUsuarios();
+	 
+	List<Usuario> findAllUsuarios();
+	
+	Usuario findUsuarioByNomeLoginAndSenha(final String senha, final String nomLoginUsuario);
 }

@@ -12,5 +12,7 @@ create table SYS_USUARIO(
 	SENHA varchar(255) not null
 );
 
+insert into SYS_USUARIO values(null, 'joao.dias', 'joao.dias@gmail.com', 'tema');
+insert into SYS_USUARIO values(null, 'tales.batista', 'tales.batista@gmail.com', 'tema');
 
 
