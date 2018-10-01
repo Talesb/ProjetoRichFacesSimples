@@ -74,6 +74,12 @@
         <dependent-module archiveName="hibernate-entitymanager-5.1.10.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/hibernate/hibernate-entitymanager/5.1.10.Final/hibernate-entitymanager-5.1.10.Final.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="hibernate-envers-5.1.10.Final.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/hibernate/hibernate-envers/5.1.10.Final/hibernate-envers-5.1.10.Final.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jta-1.1.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/javax/transaction/jta/1.1/jta-1.1.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="component.exclusion.patterns" value="WEB-INF/lib/**"/>
     </wb-module>
 </project-modules>

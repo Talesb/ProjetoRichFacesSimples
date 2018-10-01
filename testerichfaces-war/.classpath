@@ -34,7 +34,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/java/Jboss/wildfly10/modules/system/layers/base/javax/inject/api/main/javax.inject-1.jar"/>
+	<classpathentry kind="lib" path="C:/Java/Jboss/wildfly10/modules/system/layers/base/javax/inject/api/main/javax.inject-1.jar"/>
 	<classpathentry kind="src" output="target/test-classes" path=".apt_generated_tests">
 		<attributes>
 			<attribute name="optional" value="true"/>
