@@ -13,7 +13,7 @@
 	</modules>
 
 	<properties>
-		<wildfly10.home>C:\Java\wildfly</wildfly10.home>
+		<wildfly10.home>C:\Java\jboss\wildfly10</wildfly10.home>
 		<hibernate.version>5.1.10.Final</hibernate.version>
 		<hibernate.validator.version>5.4.1.Final</hibernate.validator.version>
 	</properties>
